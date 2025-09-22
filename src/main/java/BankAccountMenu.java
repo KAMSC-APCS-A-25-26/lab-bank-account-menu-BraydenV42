@@ -24,7 +24,7 @@ public class BankAccountMenu {
                     {
                         System.out.println("No negative values");
                     } else {
-                        bankAccount += adding
+                        bankAccount += adding;
                         System.out.println("Result: " + bankAccount);
                     }
                     break;
