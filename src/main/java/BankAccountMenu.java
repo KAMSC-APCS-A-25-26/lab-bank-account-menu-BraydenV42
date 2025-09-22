@@ -39,7 +39,6 @@ public class BankAccountMenu {
                         bankAccount -= subtract;
                         System.out.println("Result: " + bankAccount);
                     }
-                    System.out.println("Result: " + bankAccount);
                     break;
                 case 3: 
                     System.out.println("You have " + bankAccount + " dollars.");
