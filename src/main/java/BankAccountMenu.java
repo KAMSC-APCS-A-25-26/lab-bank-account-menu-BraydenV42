@@ -14,18 +14,24 @@ public class BankAccountMenu {
             System.out.println("Option 3. Check balance");
             System.out.println("Option 4. Exit");
             System.out.println("--------------------------------------");
-            System.out.println("What is your choice?");
+            System.out.println("Whats your choice?");
             choice = sc.nextInt();
             switch(choice) {
                 case 1:
                     System.out.println("What amount do you want to add?");
-                    bankAccount += sc.nextDouble();
+                    double adding = sc.nextDouble();
+                    bankAccount += adding;
                     System.out.println("Result: " + bankAccount);
                     break;
                 case 2:
                     System.out.println("What amount are you withdrawing?");
-                    bankAccount -= sc.nextDouble();
+                    double subtract = sc.nextDouble();
+                    bankAccount -= subtract;
                     System.out.println("Result: " + bankAccount);
+                    if(bankAccount <= 0.0)
+                    {
+                        bankAccount = 0.0;
+                    }
                     break;
                 case 3: 
                     System.out.println("You have " + bankAccount + " dollars.");
@@ -38,5 +44,3 @@ public class BankAccountMenu {
         }
     }
 }
-
-
