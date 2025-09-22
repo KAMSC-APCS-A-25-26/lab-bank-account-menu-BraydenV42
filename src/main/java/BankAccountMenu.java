@@ -14,7 +14,7 @@ public class BankAccountMenu {
             System.out.println("Option 3. Check balance");
             System.out.println("Option 4. Exit");
             System.out.println("--------------------------------------");
-            System.out.println("Whats your choice?");
+            System.out.println("What is your choice?");
             choice = sc.nextInt();
             switch(choice) {
                 case 1:
