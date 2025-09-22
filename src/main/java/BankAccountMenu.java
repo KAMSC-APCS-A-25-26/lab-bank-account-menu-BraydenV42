@@ -23,10 +23,10 @@ public class BankAccountMenu {
                     if(adding < 0)
                     {
                         System.out.println("No negative values");
-                        break;
+                    } else {
+                        bankAccount += adding
+                        System.out.println("Result: " + bankAccount);
                     }
-                    bankAccount += adding;
-                    System.out.println("Result: " + bankAccount);
                     break;
                 case 2:
                     System.out.println("What amount are you withdrawing?");
