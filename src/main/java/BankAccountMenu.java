@@ -34,7 +34,7 @@ public class BankAccountMenu {
                     break;
                 case 4:
                     running = false;
-                    System.out.println("Goodbye");
+                    System.out.println("Goodbye.");
                     break;
             }
         }
