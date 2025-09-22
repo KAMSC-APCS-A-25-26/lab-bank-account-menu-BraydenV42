@@ -9,10 +9,10 @@ public class BankAccountMenu {
         while(running) {
             int choice;
             System.out.println("------------Bank Account-------------");
-            System.out.println("1. Add money");
-            System.out.println("2. Withdraw money");
-            System.out.println("3. Check balance");
-            System.out.println("4. Exit");
+            System.out.println("Option 1. Add money");
+            System.out.println("Option 2. Withdraw money");
+            System.out.println("Option 3. Check balance");
+            System.out.println("Option 4. Exit");
             System.out.println("--------------------------------------");
             System.out.println("Whats your choice?");
             choice = sc.nextInt();
@@ -34,9 +34,11 @@ public class BankAccountMenu {
                     break;
                 case 4:
                     running = false;
-                    System.out.println("Goodbye.");
+                    System.out.println("Goodbye");
                     break;
             }
         }
     }
 }
+
+
