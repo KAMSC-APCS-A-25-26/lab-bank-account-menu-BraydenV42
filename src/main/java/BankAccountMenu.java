@@ -19,18 +19,28 @@ public class BankAccountMenu {
             switch(choice) {
                 case 1:
                     System.out.println("What amount do you want to add?");
-                    double adding = Math.abs(sc.nextDouble());
+                    double adding = sc.nextDouble();
+                    if(adding < 0)
+                    {
+                        System.out.println("No negative values");
+                    }
                     bankAccount += adding;
                     System.out.println("Result: " + bankAccount);
                     break;
                 case 2:
                     System.out.println("What amount are you withdrawing?");
-                    double subtract = Math.abs(sc.nextDouble());
+                    double subtract = sc.nextDouble();
                     bankAccount -= subtract;
                     if(bankAccount < 0)
                     {
                         bankAccount = 0.0;
                         System.out.println("Insufficient funds");
+                    }
+                    else if(subtract < 0)
+                    {
+                        bankAccount = 0.0;
+                        System.out.println("No negative values");
+                        break;
                     }
                     System.out.println("Result: " + bankAccount);
                     break;
