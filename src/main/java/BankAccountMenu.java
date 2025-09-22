@@ -31,17 +31,13 @@ public class BankAccountMenu {
                 case 2:
                     System.out.println("What amount are you withdrawing?");
                     double subtract = sc.nextDouble();
-                    bankAccount -= subtract;
-                    if(bankAccount < 0)
-                    {
-                        bankAccount = 0.0;
-                        System.out.println("Insufficient funds");
-                    }
-                    else if(subtract < 0)
-                    {
-                        bankAccount = 0.0;
+                    if (subtract < 0) {
                         System.out.println("No negative values");
-                        break;
+                    } else if (subtract > bankAccount) {
+                        System.out.println("Insufficient funds");
+                    } else {
+                        bankAccount -= subtract;
+                        System.out.println("Result: " + bankAccount);
                     }
                     System.out.println("Result: " + bankAccount);
                     break;
