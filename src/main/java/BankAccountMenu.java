@@ -23,6 +23,7 @@ public class BankAccountMenu {
                     if(adding < 0)
                     {
                         System.out.println("No negative values");
+                        break;
                     }
                     bankAccount += adding;
                     System.out.println("Result: " + bankAccount);
