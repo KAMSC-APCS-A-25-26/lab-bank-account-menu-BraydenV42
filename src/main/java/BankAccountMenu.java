@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FizzBuzzMenu {
+public class BankAccountMenu {
     public static void main(String[] args) {
         boolean running = true;
         double bankAccount = 0.0;
