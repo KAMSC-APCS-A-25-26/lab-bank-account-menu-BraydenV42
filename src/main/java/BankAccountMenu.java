@@ -27,11 +27,12 @@ public class BankAccountMenu {
                     System.out.println("What amount are you withdrawing?");
                     double subtract = Math.abs(sc.nextDouble());
                     bankAccount -= subtract;
-                    System.out.println("Result: " + bankAccount);
-                    if(bankAccount <= 0.0)
+                    if(bankAccount < 0)
                     {
                         bankAccount = 0.0;
+                        System.out.println("Insufficient funds");
                     }
+                    System.out.println("Result: " + bankAccount);
                     break;
                 case 3: 
                     System.out.println("You have " + bankAccount + " dollars.");
