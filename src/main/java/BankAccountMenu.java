@@ -34,7 +34,7 @@ public class BankAccountMenu {
                     double subtract = sc.nextDouble();
                     if (subtract < 0) {
                         System.out.println("No negative values");
-                    } else if (subtract > bankAccount) {
+                    } else if (subtract >= bankAccount) {
                         System.out.println("Insufficient funds");
                     } else {
                         bankAccount -= subtract;
