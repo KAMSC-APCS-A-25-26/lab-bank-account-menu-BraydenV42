@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class BankAccountMenu {
     public static void main(String[] args) {
         boolean running = true;
-        double bankAccount = 0.0;
+        double bankAccount = 0.00;
         Scanner sc = new Scanner(System.in);
         
         while(running) {
             int choice;
-            System.out.println("------------Bank Account-------------");
+            System.out.println("\n ------------Bank Account-------------");
             System.out.println("Option 1. Add money");
             System.out.println("Option 2. Withdraw money");
             System.out.println("Option 3. Check balance");
@@ -25,7 +25,8 @@ public class BankAccountMenu {
                         System.out.println("No negative values");
                     } else {
                         bankAccount += adding;
-                        System.out.println("Result: " + bankAccount);
+                        System.out.print("Result: ");
+                        System.out.printf("%.2f", bankAccount);
                     }
                     break;
                 case 2:
@@ -37,11 +38,13 @@ public class BankAccountMenu {
                         System.out.println("Insufficient funds");
                     } else {
                         bankAccount -= subtract;
-                        System.out.println("Result: " + bankAccount);
+                        System.out.print("Result: ");
+                        System.out.printf("%.2f", bankAccount);
                     }
                     break;
                 case 3: 
-                    System.out.println("You have " + bankAccount + " dollars.");
+                    System.out.print("Account value: ");
+                    System.out.printf("%.2f", bankAccount);
                     break;
                 case 4:
                     running = false;
