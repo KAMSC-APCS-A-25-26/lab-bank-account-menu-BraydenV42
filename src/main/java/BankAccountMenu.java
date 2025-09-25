@@ -26,8 +26,7 @@ public class BankAccountMenu {
                     } else {
                         bankAccount += adding;
                         System.out.println("Added $" + adding);
-                        System.out.print("New Balance: $");
-                        System.out.printf("%.2f", bankAccount);
+                        System.out.println("New Balance: $" + bankAccount);
                     }
                     break;
                 case 2:
@@ -40,13 +39,11 @@ public class BankAccountMenu {
                     } else {
                         bankAccount -= subtract;
                         System.out.println("Withdrew $" + subtract")
-                        System.out.print("New Balance: $");
-                        System.out.printf("%.2f", bankAccount);
+                        System.out.print("New Balance: $" + bankAccount);
                     }
                     break;
                 case 3: 
-                    System.out.print("Current Balance: $"));
-                    System.out.printf("%.2f", bankAccount);
+                    System.out.print("Current Balance: $" + bankAccount);
                     break;
                 case 4:
                     running = false;
