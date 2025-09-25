@@ -2,12 +2,54 @@ import java.util.Scanner;
 
 public class BankAccountMenu {
     public static void main(String[] args) {
-        // TODO: Implement the bank account menu
-        // 1. Create a double variable for balance
-        // 2. Create a while loop for the menu
-        // 3. Display the menu options
-        // 4. Use Scanner to read user input
-        // 5. Use switch statement to handle menu choices
-        // 6. Implement add money, withdraw money, check balance, and exit functionality
+        boolean running = true;
+        double bankAccount = 0.00;
+        Scanner sc = new Scanner(System.in);
+        
+        while(running) {
+            int choice;
+            System.out.println("\n ------------Bank Account-------------");
+            System.out.println("1. Add money");
+            System.out.println("2. Withdraw money");
+            System.out.println("3. Check balance");
+            System.out.println("4. Exit");
+            System.out.println("--------------------------------------");
+            System.out.println("Enter your choice: ");
+            choice = sc.nextInt();
+            switch(choice) {
+                case 1:
+                    System.out.print("Enter amount to add: ");
+                    double adding = sc.nextDouble();
+                    if(adding < 0)
+                    {
+                        System.out.println("No negative values");
+                    } else {
+                        bankAccount += adding;
+                        System.out.println("Added $" + adding);
+                        System.out.print("New Balance: $" + bankAccount);
+                    }
+                    break;
+                case 2:
+                    System.out.print("Enter amount to withdraw: ");
+                    double subtract = sc.nextDouble();
+                    if (subtract < 0) {
+                        System.out.println("No negative values");
+                    } else if (subtract >= bankAccount) {
+                        System.out.println("Insufficient funds");
+                    } else {
+                        bankAccount -= subtract;
+                        System.out.println("Withdrew $" + subtract);
+                        System.out.print("New Balance: $" + bankAccount);
+                    }
+                    break;
+                case 3: 
+                    System.out.print("Current Balance: $" + bankAccount);
+                    break;
+                case 4:
+                    running = false;
+                    System.out.println("Goodbye!");
+                    break;
+            }
+        }
     }
 }
