@@ -18,7 +18,7 @@ public class BankAccountMenu {
             choice = sc.nextInt();
             switch(choice) {
                 case 1:
-                    System.out.println("Enter amount to add: ");
+                    System.out.print("Enter amount to add: ");
                     double adding = sc.nextDouble();
                     if(adding < 0)
                     {
@@ -26,11 +26,11 @@ public class BankAccountMenu {
                     } else {
                         bankAccount += adding;
                         System.out.println("Added $" + adding);
-                        System.out.println("New Balance: $" + bankAccount);
+                        System.out.print("New Balance: $" + bankAccount);
                     }
                     break;
                 case 2:
-                    System.out.println("Enter amount to withdraw: ");
+                    System.out.print("Enter amount to withdraw: ");
                     double subtract = sc.nextDouble();
                     if (subtract < 0) {
                         System.out.println("No negative values");
@@ -38,7 +38,7 @@ public class BankAccountMenu {
                         System.out.println("Insufficient funds");
                     } else {
                         bankAccount -= subtract;
-                        System.out.println("Withdrew $" + subtract")
+                        System.out.println("Withdrew $" + subtract);
                         System.out.print("New Balance: $" + bankAccount);
                     }
                     break;
