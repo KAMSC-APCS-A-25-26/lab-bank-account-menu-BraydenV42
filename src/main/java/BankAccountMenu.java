@@ -9,28 +9,29 @@ public class BankAccountMenu {
         while(running) {
             int choice;
             System.out.println("\n ------------Bank Account-------------");
-            System.out.println("Option 1. Add money");
-            System.out.println("Option 2. Withdraw money");
-            System.out.println("Option 3. Check balance");
-            System.out.println("Option 4. Exit");
+            System.out.println("1. Add money");
+            System.out.println("2. Withdraw money");
+            System.out.println("3. Check balance");
+            System.out.println("4. Exit");
             System.out.println("--------------------------------------");
-            System.out.println("Whats your choice?");
+            System.out.println("Enter your choice: ");
             choice = sc.nextInt();
             switch(choice) {
                 case 1:
-                    System.out.println("What amount do you want to add?");
+                    System.out.println("Enter amount to add: ");
                     double adding = sc.nextDouble();
                     if(adding < 0)
                     {
                         System.out.println("No negative values");
                     } else {
                         bankAccount += adding;
-                        System.out.print("Result: ");
+                        System.out.println("Added $" + adding);
+                        System.out.print("New Balance: $");
                         System.out.printf("%.2f", bankAccount);
                     }
                     break;
                 case 2:
-                    System.out.println("What amount are you withdrawing?");
+                    System.out.println("Enter amount to withdraw: ");
                     double subtract = sc.nextDouble();
                     if (subtract < 0) {
                         System.out.println("No negative values");
@@ -38,17 +39,18 @@ public class BankAccountMenu {
                         System.out.println("Insufficient funds");
                     } else {
                         bankAccount -= subtract;
-                        System.out.print("Result: ");
+                        System.out.println("Withdrew $" + subtract")
+                        System.out.print("New Balance: $");
                         System.out.printf("%.2f", bankAccount);
                     }
                     break;
                 case 3: 
-                    System.out.print("Account value: ");
+                    System.out.print("Current Balance: $"));
                     System.out.printf("%.2f", bankAccount);
                     break;
                 case 4:
                     running = false;
-                    System.out.println("Goodbye");
+                    System.out.println("Goodbye!");
                     break;
             }
         }
